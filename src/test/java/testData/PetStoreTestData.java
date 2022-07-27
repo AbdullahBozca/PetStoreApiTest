@@ -53,7 +53,7 @@ public class PetStoreTestData {
         List<HashMap> tagsList=new ArrayList<HashMap>();
         tagsList.add(tagsMap);
         JSONObject expectedRequest=new JSONObject();
-        expectedRequest.put("id",922337299);
+        expectedRequest.put("id",987654);
         expectedRequest.put("category", category);
         expectedRequest.put("name","qqqqqq");
         expectedRequest.put("photoUrls",photoUrls);
@@ -69,6 +69,14 @@ public class PetStoreTestData {
         expectedRequest.put("StatusCode", 200);
         expectedRequest.put("status","sold");
         expectedRequest.put("oldStatus","available");
+        return expectedRequest;
+    }
+
+    public JSONObject setupDeleteRequestData(){
+        JSONObject expectedRequest = new JSONObject();
+        expectedRequest.put("code",200);
+        expectedRequest.put("type", "unknown");
+        expectedRequest.put("message","1");
         return expectedRequest;
     }
 }
